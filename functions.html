@@ -1,0 +1,74 @@
+<!DOCTYTPE html!>
+<html>
+	<head>
+		<title>Correction</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			function exo1 ( n ) { return 2 * n; }
+			function exo2 ( n ) { return n * n; }
+			function exo3 ( n ) {
+				var tab = [];
+				for ( var i = 0; i < n; i++ )
+					tab.push(0);
+				return tab;
+			}
+			function exo4 ( n ) {
+				var tab = [];
+				for ( var i = 0; i < n; i++ )
+					tab.push(i);
+				return tab;
+			}
+			function exo5 ( n ) {
+				var tab = [];
+				for ( var i = 0; i < n; i++ )
+					tab.push(i * 2);
+				return tab;
+			}
+			function exo6 ( str ) {
+				var nStr = '';
+				for ( var i = 0; i < str.length; i++ )
+					nStr = nStr + str[str.length - i - 1];
+				return nStr;
+			}
+			function exo7 ( n, str ) {
+				var nStr = '';
+				for ( var i = 0; i < n; i++ )
+					nStr += str;
+				return nStr;
+			}
+			function exo8 ( name, age ) {
+				return {
+					name: name,
+					age: age,
+				};
+			}
+			function exo9 ( tab ) {
+				var nTab = [];
+				var present;
+				for ( var i = 0; i < tab.length; i++ ) {
+					present = false;
+					for ( var j = 0; j < nTab.length; j++ ) {
+						if ( nTab[j] === tab[i] ){
+							present = true;
+							break;
+						}
+					}
+					if ( !present )
+						nTab.push(tab[i]);
+				}
+				
+			}
+			
+			function exo10 ( tab1, tab2 ) {
+				var obj = {};
+				for ( var i = 0; i < tab1.length; i++ )
+					obj[tab1[i]] = tab2[i];
+				return obj;
+			}
+		</script>
+		
+	</body>
+</html>

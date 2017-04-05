@@ -1,0 +1,52 @@
+<!DOCTYTPE html!>
+<html>
+	<head>
+		<title>Correction</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			
+			var n = 10;
+			var m = 15;
+			
+			var table = document.createElement('table');
+			var tr, td;
+			for ( var i = 0; i < n; i++ ) {
+				
+				tr = document.createElement('tr');
+				
+				for ( var j = 0; j < m; j++ ) {
+					
+					td = document.createElement('td');
+					td.style.backgroundColor = 'red';
+					td.style.height = '10px';
+					td.style.width = '10px';
+					td.innerText = "0";
+					
+					td.addEventListener('click', function (e) {
+						
+						if ( this.style.backgroundColor == 'red' )
+							this.style.backgroundColor = 'green';
+						else this.style.backgroundColor = 'red';
+						
+						this.innerText = (parseInt(this.innerText) + 1) % 10;
+						
+						
+					});
+					
+					tr.appendChild(td);
+					
+					
+				}
+				
+				table.appendChild(tr);
+			}
+			
+			document.body.appendChild(table);
+			
+		</script>
+		
+	</body>
+</html>
